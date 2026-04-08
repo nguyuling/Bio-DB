@@ -1,0 +1,13 @@
+[
+    {
+        "doctor_id" : "D001",
+        "name" : "Dr. Lim",
+        "specialization" : "Cardiology"
+    },
+    {   
+        "doctor_id" : "D002",
+        "name" : "Dr. Kumar",
+        "specialization" : "Dermatology"
+
+    }
+]

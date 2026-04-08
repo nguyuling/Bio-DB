@@ -1,0 +1,14 @@
+[
+    {
+        "patient_id" : "P001",
+        "name" : "John Tan",
+        "data_of birth" : "1990-05-12",
+        "phone" : "012-3456789" 
+    },
+    {
+        "patient_id" : "P001",
+        "name" : "John Tan",
+        "data_of birth" : "1985-11-03",
+        "phone" : "013-9876543"
+    }
+]
