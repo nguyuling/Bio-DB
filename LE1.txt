@@ -1,0 +1,36 @@
+db.airbnb.find({
+    "address.market":"Sydney",
+    price: {$lt:100}
+},
+{
+    name: 1,
+    address: 1,
+    price: 1
+}).sort({price:1})
+
+
+db.airbnb.find({bedrooms:2, bathrooms:1.0}, {url:1, name:1})
+
+
+db.airbnb.find({bedrooms: {$gt:4}})
+
+
+db.airbnb.find({"address.country":"Hong Kong", guests_included:{$gt:6}}).sort({price:-1}).limit(5)
+
+
+db.airbnb.find({"address.market":"New York", "amenities":{$all: ["Gym", "Pool", "Hot tub"]}}, {name:1, listing_url:1, amenities:1})
+
+
+db.airbnb.find({"address.country":"Portugal", property_type: "Apartment"})
+
+
+db.airbnb.find({"address.market":"Barcelona", price:{$gte:50, $lte:200}})
+
+
+db.airbnb.find({"review_scores.review_scores_rating": {$gte:95}}, {name:1, listing_url:1, review_scores:1}).sort({review_scores:-1})
+
+
+db.airbnb.find({"address.market":"Sydney", "amenities":{$in: ["Heating", "Air Conditioning"]}}, {name:1, amenities:1})
+
+
+db.airbnb.find({"address.country":"Australia", "amenities": {$nin: ["Pets Allowed"]}}, {name:1, amenities:1})
