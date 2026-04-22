@@ -1,0 +1,5 @@
+// for export 
+mongoexport --uri "mongodb+srv://dbAdmin:1234abcd@cluster0.dklylwy.mongodb.net/" --db <db> --collection <col> --out <file>.json
+
+// for inport
+mongoimport --uri "mongodb+srv://dbAdmin:1234abcd@cluster0.dklylwy.mongodb.net/" --db <db> --collection <col> --drop --jsonArray --file <file>.json
