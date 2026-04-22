@@ -1,0 +1,17 @@
+{
+    "EMPLOYEE" : "Murphy",
+    "Place" : "Kent",
+    "DEPARTMENT" : {
+        "Designation" : "IT"
+    },
+    "PROJECT" : [
+        {
+            "Title" : "WebX",
+            "Workload" : 0.55
+        },
+        {
+            "Title" : "X",
+            "Workload" : 0.45
+        }
+    ]
+}
