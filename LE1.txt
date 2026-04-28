@@ -10,7 +10,14 @@ db.airbnb.find({
 
 
 db.airbnb.find({bedrooms:2, bathrooms:1.0}, {url:1, name:1})
-
+db.airbnb.find({
+    bedrooms: 1,
+    bathrooms: 1.o
+},
+{
+    url: 1,
+    name: 1
+})
 
 db.airbnb.find({bedrooms: {$gt:4}})
 
