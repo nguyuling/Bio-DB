@@ -1,3 +1,5 @@
+**(Use the :☰ to better navigates the contents :)**
+
 # Introduction to Bioinformatics Databases & Big Data
 
 ### 1. Bioinformatics Database
@@ -87,7 +89,7 @@ Genomics -> Transciptomics -> Proteomics
 ### 1. NoSQL
 - **NoSQL** is DBMS that is designed to handle large volume, unstructured or semi-structured data suitable for big data apps and real-time web apps.
 
-- **Characteristics of NoSQL**
+- **Characteristics of NoSQL:**
     | Characteristics | Description |
     | --- | --- |
     | Schema Flexibility | Handle evolving data structures |
@@ -96,7 +98,7 @@ Genomics -> Transciptomics -> Proteomics
     | Various Data Models | Such as file-based, graph, key-value |
     | Distributed Architecture | Run on cluster for high availabiltity |
 
-- **Types of NoSQL**
+- **Types of NoSQL:**
     | Types | Description |
     | --- | --- |
     | Document-oriented | JSON-liked documents with flexible fields per document, suitable for hierarchical or nested data |
@@ -105,6 +107,7 @@ Genomics -> Transciptomics -> Proteomics
     | Graph | Store entities in nodes and relationships in edges, suitable for modeling biological networks |
 
 ### 2. SQL vs NoSQL
+
     | Aspects | SQL | NoSQL |
     | --- | --- | --- |
     | Data Model | Structured and tabular with predefined schema | Flexible and dynamic schema |
@@ -113,6 +116,7 @@ Genomics -> Transciptomics -> Proteomics
     | Examples | MySQL, PostgreSQL, Oracle | MongoDB, Redis, Cassandra |
 
 ### 3. Characteristics of Biological Database
+
     | Characteristics | Description | Needs |
     | --- | --- | --- |
     | High Volume | Data is generated in massive quantity | Scalable storage and fast access |
