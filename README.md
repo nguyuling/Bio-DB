@@ -221,10 +221,7 @@ Genomics -> Transciptomics -> Proteomics
     - `lte`: Less than or equal to
 ```
     db.<collection>.<query>({
-        <field>: {
-            $op: value,
-                ⋮
-        }
+        <field>: { $op: value,... }
     })
 ```
 
@@ -269,6 +266,64 @@ Genomics -> Transciptomics -> Proteomics
 ```
 
 # T6 — MongoDB Aggregation FrameWork
+### 1. Aggregation framework
+```
+    db.<collection>.aggregate([
+        { stage_1 },
+        { stage_2 },
+        ⋮
+    ])
+```
 
+### 2. Matching
+```
+    db.<collection>.aggregate([{
+        $match: { <field>: value,... }
+    }])
+```
+
+### 3. Grouping
+```
+    db.<collection>.aggregate([{
+        $group: {
+            _id: "$field",
+            <new field>: { $avg/sum/mean/max/count: <field>/1 }
+        }
+    }])
+```
+
+### 4. Projection
+```
+    db.<collection>.aggregate([{
+        $project: {
+            <field_1>: 1
+            <field_2>: 0
+        }
+    }])
+```
+
+### 5. Sorting
+```
+    db.<collection>.aggregate([{
+        $sort: {
+            <field_1>: 1,
+            <field_2>: -1
+        }
+    }])
+```
+
+### 6. Limit
+```
+    db.<collection>.aggregate([{
+        $limit: n
+    }])
+```
+
+### 7. Unwind array
+```
+    db.<collection>.aggregate([{
+        $unwind: "$array"
+    }])
+```
 
 # T7 — Application Programming Interface
