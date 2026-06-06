@@ -1,6 +1,6 @@
 (Pleaese use the ⋮☰ to better navigates the contents :)
 
-# Introduction to Bioinformatics Databases & Biological Big Data
+# T1 — Introduction to Bioinformatics Databases
 
 ### 1. Bioinformatics Database
 - **Bioinformatics** is the science of collecting, storing, organizing and analyzing biological data using computational tools and statistical method to gain meaningful insights.
@@ -41,7 +41,7 @@ Genomics -> Transciptomics -> Proteomics
     | Integration and interoperability | Absence of globally  agreed identifiers for biological entities | 
     | Scale and performance | Standard relational database may not be adequate for intensive workloads |
 
-# Relational Databases for Biological Big Data
+# T2 — Relational Databases for Biological Big Data
 
 ### 1. ACID (Relational DB)
 - **ACID**
@@ -85,7 +85,7 @@ Genomics -> Transciptomics -> Proteomics
 | Soft State | Data states change as replica independently converge over time |
 | Eventually consistent | All replicas will eventually converge to the identical value |
 
-# Introduction to NoSQL
+# T3 — Introduction to NoSQL
 ### 1. NoSQL
 - **NoSQL** is DBMS that is designed to handle large volume, unstructured or semi-structured data suitable for big data apps and real-time web apps.
 
@@ -121,10 +121,19 @@ Genomics -> Transciptomics -> Proteomics
 | Heterogenous | Data comes in various sources and modalities | Flexible schema |
 | Flexible in Structure | Data evolves over time and frequent updates | Dynamic fields |
 
-# Introduction to MongoDB
-1. **Features**
+# T4 — Introduction to MongoDB
 
-2. **MongoDB Terminologies**
+### 1. Features
+| Features | Description |
+| --- | --- |
+| Document-oriented Storage | Using BSON, allow complex and nested structure |
+| Schema Flexibility | do not require predefined schema and different documents in the same collection can have different structures |
+| Scalability | Support horizontal scaling through sharding and distributing data across multiple machiens |
+| Powerful Query Language | Support filtering, sorting, aggregation, geospatial queries and full-text search |
+| Aggregation Framework | For data transformation and analytics |
+| Integration with Modern Tech | Include programming languages and cloud deployment |
+
+### 2. MongoDB Terminologies
 ```
      Cluster
         ↓
@@ -135,22 +144,31 @@ Genomics -> Transciptomics -> Proteomics
      Document
 ```
 
-3. **Environment**
+### 3. Environments
+| Environments | Description |
+| --- | --- |
+| Database Tool (CLI) | Backup, restore, migration |
+| Compass (GUI) | Querying, perform basic CRUD and has descriptive analytics on the schema of the collection |
+| Shell (CLI) | Default interface for Compass |
+| Atlas | Fully managed cloud-hosted database-as-a-service |
+| Community Server | Self-managed software |
+| Charts | Built-in visualization tool to create dashboards and charts |
+| BI Connector | For SQL-based BI tools to query data |
 
-4. **Import and Export of Collection:**
+### 4. Import and Export of Collection:
 ```
-                     mongoexport           mongoimport
-MongoDB Collection  —————————————>  JSON  —————————————>  MongoDB Collection
-    (Site A)        <—————————————  BSON  <—————————————        (Site B)
-                       mongodumb             mongostore
+                        mongoexport           mongoimport
+    MongoDB Collection  —————————————>  JSON  —————————————>  MongoDB Collection
+        (Site A)        <—————————————  BSON  <—————————————        (Site B)
+                        mongodumb             mongostore
 ```
 
-5. **Data Modeling**
+### 5. Data Modeling
     - **Referencing** (normalised): Store relationships between data using references
     - **Embedding** (denormalised): Embed all related data into a single document
 
-# MongoDB: Querying
+# T5 — MongoDB: Querying
 
-# MongoDB Aggregation FrameWork
+# T6 — MongoDB Aggregation FrameWork
 
-# Application Programming Interface
+# T7 — Application Programming Interface
