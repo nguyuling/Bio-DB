@@ -164,10 +164,94 @@ Genomics -> Transciptomics -> Proteomics
 ```
 
 ### 5. Data Modeling
-    - **Referencing** (normalised): Store relationships between data using references
-    - **Embedding** (denormalised): Embed all related data into a single document
+- **Referencing** (normalised): Store relationships between data using references
+- **Embedding** (denormalised): Embed all related data into a single document
 
 # T5 — MongoDB: Querying
+
+### 1. Create / insert data
+- `insertOne()`: Create a single data
+```
+    db.<collection>.insertOne(
+        { field: value }
+    )
+```
+- `insertMany()`: Create multiple data
+```
+    db.<collection>.insertMany(
+        { field_1: value },
+        { field_2: value },
+        ⋮
+    )
+```
+
+### 2. Update data
+- `updateMany()`: First parameter is the matching criteris, second paramater is the updated data
+```
+    db.<collection>.updateMany(
+        { field: value },
+        { $set: { "field": "value" } }
+    )
+```
+
+### 3. Find data
+- `find()`: Find and select what to show
+```
+    db.<collection>.find(
+        { field: value },
+        { _id: 0, name: 1 }
+    )
+```
+
+### 4. Sort
+- `sort()`: 1 is ascending order, -1 is descending order
+```
+    db.<collection>.sort(
+        { age: 1 }
+    )
+```
+
+### 5. Query operator
+- **Comparison operator:**
+    - `$eq`: Equal to
+    - `$ne`: Not equal to
+    - `gt`: Greater than
+    - `gte`: Greater than or equal to
+    - `lt`: Less than
+    - `lte`: Less than or equal to
+```
+    db.<collection>.<query>({
+        <field>: {
+            $op: value,
+            ⋮
+        }
+    })
+```
+
+- **Logical operator:**
+    - `$and`
+    - `$or`
+    - `$nor`: Negate the query requirement
+    - `$not`
+```
+    db.<collection>.<query>({
+        $and/or/nor: [ 
+            { statement 1 }, 
+            { statement 2 }
+        ]
+    })
+```
+```
+    db.<collection>.<query>({
+        $not: { statement }
+    })
+```
+
+### 6. Array
+- `$all`: Match all, array contains all the specified values
+- `$in`: Match at least one , array contains >=1 of the specified values
+- `$size`: Size of array must match the specified value
+- `$elemMatch`: Array contains the exact element
 
 # T6 — MongoDB Aggregation FrameWork
 
