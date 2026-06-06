@@ -1,6 +1,6 @@
-**(Use the ⋮☰ to better navigates the contents :)**
+(Pleaese use the ⋮☰ to better navigates the contents :)
 
-# Introduction to Bioinformatics Databases & Big Data
+# Introduction to Bioinformatics Databases & Biological Big Data
 
 ### 1. Bioinformatics Database
 - **Bioinformatics** is the science of collecting, storing, organizing and analyzing biological data using computational tools and statistical method to gain meaningful insights.
@@ -122,6 +122,32 @@ Genomics -> Transciptomics -> Proteomics
 | Flexible in Structure | Data evolves over time and frequent updates | Dynamic fields |
 
 # Introduction to MongoDB
+1. **Features**
+
+2. **MongoDB Terminologies**
+```
+     Cluster
+        ↓
+     Database
+        ↓
+    Collection
+        ↓
+     Document
+```
+
+3. **Environment**
+
+4. **Import and Export of Collection:**
+```
+                     mongoexport           mongoimport
+MongoDB Collection  —————————————>  JSON  —————————————>  MongoDB Collection
+    (Site A)        <—————————————  BSON  <—————————————        (Site B)
+                       mongodumb             mongostore
+```
+
+5. **Data Modeling**
+    - **Referencing** (normalised): Store relationships between data using references
+    - **Embedding** (denormalised): Embed all related data into a single document
 
 # MongoDB: Querying
 
