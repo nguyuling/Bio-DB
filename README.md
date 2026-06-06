@@ -1,5 +1,5 @@
 <details>
-<summary><h1>Introduction to Bioinformatics Databases & Biological Big Data</h1></summary>
+<summary><h1>Introduction to Bioinformatics Databases & Big Data</h1></summary>
 
 ### 1. Bioinformatics Database
 - **Bioinformatics** is the science of collecting, storing, organizing and analyzing biological data using computational tools and statistical method to gain meaningful insights.
