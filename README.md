@@ -1,5 +1,5 @@
 <details>
-<summary><h1>Introduction to Bioinformatics Databases & Big Data</h1></summary>
+<summary><h1><ins>Introduction to Bioinformatics Databases & Big Data</ins></h1></summary>
 
 ### 1. Bioinformatics Database
 - **Bioinformatics** is the science of collecting, storing, organizing and analyzing biological data using computational tools and statistical method to gain meaningful insights.
@@ -32,7 +32,7 @@ Genomics -> Transciptomics -> Proteomics
     | Value | Meaningful and able to generate actiionable insights |
     | Variety | Multiple formats and structures |
 
-- Chanllenges in Biological Data Management
+- **Chanllenges in Biological Data Management**
     | Chanllenges | Description
     | --- | --- |
     | Heterogeneity | biolofical data vary in structures and completeness, and a fixed schema cannot handle the complexity |
