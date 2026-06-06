@@ -1,6 +1,4 @@
-<details>
-<summary><h1>Introduction to Bioinformatics Databases & Big Data</h1><hr></summary>
-
+# Introduction to Bioinformatics Databases & Big Data
 
 ### 1. Bioinformatics Database
 - **Bioinformatics** is the science of collecting, storing, organizing and analyzing biological data using computational tools and statistical method to gain meaningful insights.
@@ -40,9 +38,49 @@ Genomics -> Transciptomics -> Proteomics
     | Versioning | Biological data is not static and versioning is needed for update and query |
     | Integration and interoperability | Absence of globally  agreed identifiers for biological entities | 
     | Scale and performance | Standard relational database may not be adequate for intensive workloads |
-</details>
 
 # Relational Databases for Biological Big Data
+
+### 1. ACID (Relational DB)
+- **ACID**
+    | ACID | Discription |
+    | --- | --- |
+    | Atomicity | A transaction is either completes fully or not at all |
+    | Consistency | A transaction moves the database from one valid state to another |
+    | Isolation | Concurrent transactions do not interfere with each other |
+    | Durability | Committed data survives crashes |
+
+- **Costs of ACID**
+    | Costs | Discription |
+    | --- | --- |
+    | Locking mechanism | Ensure atomicity and isolation by preventing concurrent access |
+    | Index lookup | Maintain consistency by performing index lookup on every insert |
+    | Transaction logs | Ensure durability by requiring physical logging before confirming the commit |
+
+- **Limitations of Relational DB**
+    | Limitations | Discription |
+    | --- | --- |
+    | Schema rigidity | heterogenous biological data cannot be stored in fixed uniform relational table |
+    | JOIN operation | Joining massive biological data stored in different tables costs time and space |
+    | Schema evolution | Advancement in biological knowledge requires modification of DB schema, which can be risky and slow |
+
+### 2. CAP Theorem (Distributed DB)
+- **CAP**
+    | CAP | Description |
+    | --- | --- |
+    | Consistency | Every read returns the most recent writes |
+    | Availability | Every request receives a non-error response |
+    | Partition Tolerance | System continues operating despite network failures |
+- At most **2/3 of CAP**
+    - **CP** (No availability): Rejects request to prevent reading the wrong data
+    - **AP** (No consistency): Answers request with stale data to stay online
+
+### 3. BASE Model (NoSQL)
+    | BASE | Description |
+    | --- | --- |
+    | Basically Available | System guarantees availability | 
+    | Soft State | Data states change as replica independently converge over time |
+    | Eventually consistent | All replicas will eventually converge to the identical value |
 
 # Introduction to NoSQL
 
