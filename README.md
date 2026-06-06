@@ -60,7 +60,7 @@ Genomics -> Transciptomics -> Proteomics
 - **Limitations of Relational DB**
     | Limitations | Discription |
     | --- | --- |
-    | Schema rigidity | heterogenous biological data cannot be stored in fixed uniform relational table |
+    | Schema rigidity | Heterogenous biological data cannot be stored in fixed uniform relational table |
     | JOIN operation | Joining massive biological data stored in different tables costs time and space |
     | Schema evolution | Advancement in biological knowledge requires modification of DB schema, which can be risky and slow |
 
@@ -71,6 +71,7 @@ Genomics -> Transciptomics -> Proteomics
     | Consistency | Every read returns the most recent writes |
     | Availability | Every request receives a non-error response |
     | Partition Tolerance | System continues operating despite network failures |
+
 - At most **2/3 of CAP**
     - **CP** (No availability): Rejects request to prevent reading the wrong data
     - **AP** (No consistency): Answers request with stale data to stay online
@@ -83,6 +84,40 @@ Genomics -> Transciptomics -> Proteomics
     | Eventually consistent | All replicas will eventually converge to the identical value |
 
 # Introduction to NoSQL
+### 1. NoSQL
+- **NoSQL** is DBMS that is designed to handle large volume, unstructured or semi-structured data suitable for big data apps and real-time web apps.
+
+- **Characteristics of NoSQL**
+    | Characteristics | Description |
+    | --- | --- |
+    | Schema Flexibility | Handle evolving data structures |
+    | Horizontal Scalability | Distribute across multiple servers or nodes to handle heavy traffic |
+    | High Performance | Offer faster read and write operations, especially for large scale apps |
+    | Various Data Models | Such as file-based, graph, key-value |
+    | Distributed Architecture | Run on cluster for high availabiltity |
+
+- **Types of NoSQL**
+    | Types | Description |
+    | --- | --- |
+    | Document-oriented | JSON-liked documents with flexible fields per document, suitable for hierarchical or nested data |
+    | Key-value | Key-value pairs, supporting high speed lookups, suitable for caching or session storage |
+    | Column family | Optimized for heavy workloads and time-series data |
+    | Graph | Store entities in nodes and relationships in edges, suitable for modeling biological networks |
+
+### 2. SQL vs NoSQL
+    | Aspects | SQL | NoSQL |
+    | --- | --- | --- |
+    | Data Model | Structured and tabular with predefined schema | Flexible and dynamic schema |
+    | Consistency Model | Strong consistency (ACID) | Eventually consistent (BASE) |
+    | Data Relationships | Strong support via join and foreign key | Limited for join, denormalized data |
+    | Examples | MySQL, PostgreSQL, Oracle | MongoDB, Redis, Cassandra |
+
+### 3. Characteristics of Biological Database
+    | Characteristics | Description | Needs |
+    | --- | --- | --- |
+    | High Volume | Data is generated in massive quantity | Scalable storage and fast access |
+    | Heterogenous | Data comes in various sources and modalities | Flexible schema |
+    | Flexible in Structure | Data evolves over time and frequent updates | Dynamic fields |
 
 # Introduction to MongoDB
 
