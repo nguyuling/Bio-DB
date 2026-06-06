@@ -1,4 +1,4 @@
-# Introduction to Bioinformatics Databases & Biological Big Data
+# T1: Introduction to Bioinformatics Databases & Biological Big Data
 
 ### 1. **Bioinformatics Database**
 - **Bioinformatics** is the science of collecting, storing, organizing and analyzing biological data using computational tools and statistical method to gain meaningful insights.
@@ -13,9 +13,9 @@ Genomics -> Transciptomics -> Proteomics
     - National Center for Biotechnology Institute (NCBI)
     - European Bioinformatics Institute (EMBL-EBI)
     - National Institute of Genetics (NGI)
-- Workflow in bioinformatics
+- **Workflow in bioinformatics:**
 ```
-    **Data sotrage** <- Source data from experiments and discoveries
+    Data sotrage <- Source data from experiments and discoveries
                  <-> Data analysed and processed using computational method and algorithm
                  <-> Analysis result used for further interpretation and visualization
                  <-> Multiple data used for integrated analysis and knowledge sharing
