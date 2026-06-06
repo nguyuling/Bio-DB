@@ -1,4 +1,4 @@
-(Pleaese use the ⋮☰ to better navigates the contents :)
+(Pleaese use the ⋮☰ to better navigate the contents :)
 
 # T1 — Introduction to Bioinformatics Databases
 
