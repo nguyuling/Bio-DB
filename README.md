@@ -1,4 +1,4 @@
-**(Use the :☰ to better navigates the contents :)**
+**(Use the ⋮☰ to better navigates the contents :)**
 
 # Introduction to Bioinformatics Databases & Big Data
 
@@ -79,11 +79,11 @@ Genomics -> Transciptomics -> Proteomics
     - **AP** (No consistency): Answers request with stale data to stay online
 
 ### 3. BASE Model (NoSQL)
-    | BASE | Description |
-    | --- | --- |
-    | Basically Available | System guarantees availability | 
-    | Soft State | Data states change as replica independently converge over time |
-    | Eventually consistent | All replicas will eventually converge to the identical value |
+| BASE | Description |
+| --- | --- |
+| Basically Available | System guarantees availability | 
+| Soft State | Data states change as replica independently converge over time |
+| Eventually consistent | All replicas will eventually converge to the identical value |
 
 # Introduction to NoSQL
 ### 1. NoSQL
@@ -107,21 +107,19 @@ Genomics -> Transciptomics -> Proteomics
     | Graph | Store entities in nodes and relationships in edges, suitable for modeling biological networks |
 
 ### 2. SQL vs NoSQL
-
-    | Aspects | SQL | NoSQL |
-    | --- | --- | --- |
-    | Data Model | Structured and tabular with predefined schema | Flexible and dynamic schema |
-    | Consistency Model | Strong consistency (ACID) | Eventually consistent (BASE) |
-    | Data Relationships | Strong support via join and foreign key | Limited for join, denormalized data |
-    | Examples | MySQL, PostgreSQL, Oracle | MongoDB, Redis, Cassandra |
+| Aspects | SQL | NoSQL |
+| --- | --- | --- |
+| Data Model | Structured and tabular with predefined schema | Flexible and dynamic schema |
+| Consistency Model | Strong consistency (ACID) | Eventually consistent (BASE) |
+| Data Relationships | Strong support via join and foreign key | Limited for join, denormalized data |
+| Examples | MySQL, PostgreSQL, Oracle | MongoDB, Redis, Cassandra |
 
 ### 3. Characteristics of Biological Database
-
-    | Characteristics | Description | Needs |
-    | --- | --- | --- |
-    | High Volume | Data is generated in massive quantity | Scalable storage and fast access |
-    | Heterogenous | Data comes in various sources and modalities | Flexible schema |
-    | Flexible in Structure | Data evolves over time and frequent updates | Dynamic fields |
+| Characteristics | Description | Needs |
+| --- | --- | --- |
+| High Volume | Data is generated in massive quantity | Scalable storage and fast access |
+| Heterogenous | Data comes in various sources and modalities | Flexible schema |
+| Flexible in Structure | Data evolves over time and frequent updates | Dynamic fields |
 
 # Introduction to MongoDB
 
