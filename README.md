@@ -181,7 +181,7 @@ Genomics -> Transciptomics -> Proteomics
     db.<collection>.insertMany(
         { field_1: value },
         { field_2: value },
-        ⋮
+            ⋮
     )
 ```
 
@@ -223,7 +223,7 @@ Genomics -> Transciptomics -> Proteomics
     db.<collection>.<query>({
         <field>: {
             $op: value,
-            ⋮
+                ⋮
         }
     })
 ```
@@ -252,7 +252,23 @@ Genomics -> Transciptomics -> Proteomics
 - `$in`: Match at least one , array contains >=1 of the specified values
 - `$size`: Size of array must match the specified value
 - `$elemMatch`: Array contains the exact element
+```
+    db.<collection>.<query>({
+        <array>: { $all/in: [ value_1, value_2,...] }
+    })
+```
+```
+    db.<collection>.<query>({
+        <array>: { $size: value }
+    })
+```
+```
+    db.<collection>.<query>({
+        <array>: { $elemMatch: { <field>: value } }
+    })
+```
 
 # T6 — MongoDB Aggregation FrameWork
+
 
 # T7 — Application Programming Interface
