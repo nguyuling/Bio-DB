@@ -162,6 +162,11 @@ Genomics -> Transciptomics -> Proteomics
         (Site A)        <—————————————  BSON  <—————————————        (Site B)
                         mongodumb             mongostore
 ```
+- Export
+`mongoexport --uri "mongodb+srv://<username>:<password>@<cluster>.dklylwy.mongodb.net/" --db <db> --collection <collection> --out <file>.json`
+
+- Import
+`mongoimport --uri "mongodb+srv://<username>:<password>@<cluster>.dklylwy.mongodb.net/" --db <db> --collection <collection> --drop --jsonArray --file <file>.json`
 
 ### 5. Data Modeling
 - **Referencing** (normalised): Store relationships between data using references
