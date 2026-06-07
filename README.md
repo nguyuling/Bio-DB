@@ -378,7 +378,7 @@ mongoimport --uri "mongodb+srv://<username>:<password>@<cluster>.dklylwy.mongodb
     | DELETE (delete) | Remove specific resources |
 
 - **HTTP status codes:**
-<table style="margin-left: 40px;">
+<table style="margin-left: 80px;">
     <thead><tr><th colspan="2">Status codes</th><th>Description</th></tr></thead>
     <tbody>
         <tr><td rowspan="2">Success</td><td>200 OK</td><td>Successful HTTP request</td></tr>
