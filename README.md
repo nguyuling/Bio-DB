@@ -296,7 +296,7 @@ mongoimport --uri "mongodb+srv://<username>:<password>@<cluster>.dklylwy.mongodb
     db.<collection>.aggregate([{
         $group: {
             _id: "$field",
-            <new field>: { $avg/sum/mean/max/count: <field>/1 }
+            <new field>: { $avg/sum/mean/max/count: "$field"/1 }
         }
     }])
 ```
