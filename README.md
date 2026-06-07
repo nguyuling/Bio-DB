@@ -45,7 +45,7 @@ Genomics -> Transciptomics -> Proteomics
 
 ### 1. ACID (Relational DB)
 - **ACID**
-    | ACID | Discription |
+    | ACID | Description |
     | --- | --- |
     | Atomicity | A transaction is either completes fully or not at all |
     | Consistency | A transaction moves the database from one valid state to another |
@@ -53,14 +53,14 @@ Genomics -> Transciptomics -> Proteomics
     | Durability | Committed data survives crashes |
 
 - **Costs of ACID**
-    | Costs | Discription |
+    | Costs | Description |
     | --- | --- |
     | Locking mechanism | Ensure atomicity and isolation by preventing concurrent access |
     | Index lookup | Maintain consistency by performing index lookup on every insert |
     | Transaction logs | Ensure durability by requiring physical logging before confirming the commit |
 
 - **Limitations of Relational DB**
-    | Limitations | Discription |
+    | Limitations | Description |
     | --- | --- |
     | Schema rigidity | Heterogenous biological data cannot be stored in fixed uniform relational table |
     | JOIN operation | Joining massive biological data stored in different tables costs time and space |
@@ -336,3 +336,67 @@ mongoimport --uri "mongodb+srv://<username>:<password>@<cluster>.dklylwy.mongodb
 ```
 
 # T7 — Application Programming Interface
+
+### 1. API
+- **API** is a set of rules or protocols or functions that allows software programs to interact with one another.
+
+- **Importance of API:**
+    | Importances | Description |
+    | --- | --- |
+    | Data Accessibility | APIs provide structured way to access data without the need to understand the underlying database structure |
+    | Time Efficiency | APIs provide predefined functions for common task |
+    | Interoperability | APIs allow communication of different software systems involved in any workflow |
+    | Data Consistency | APIs provide standardized rules to access data and hence reduce the risk of errors |
+    | Security | APIs implement access controls and validation checks |
+
+- **Types of APIs:**
+    - **Web APIs**: Can be accessed over internet using HTTP protocol and are RESTful, data are returned in JSON or XML format.
+    - **Library/Package APIs**: Language-specific interfaces like Python libraries that provide function and classes for working with data.
+
+- **APIs workflow:**
+    1. Client (program/script/tool) sends a request to the API endpoint.
+    2. Server hosting the API receives the request and processes it based on the parameters, then server performs query to the data source at backend.
+    3. Server returns the data requested or error notification (if any) to the client as a response.
+
+### 2. RESTful API
+- REST is **Representational State Transfer**, which is a set of guiding principles for building web services.
+
+- **Core of REST:**
+    | Cores | Description |
+    | --- | --- |
+    | Client-Server Architecture | Client and server are separated, where client requests data through UI and server handles data storage and processing |
+    | Statelessness | Server do not store any session about the client between requests |
+    | Uniform Interface (resource-based) | API are built around resources rather than action |
+    | Representation | Server do not send the actual database but a representation of the state of the resource |
+
+- **HTTP methods:**
+    | Methods | Description |
+    | --- | --- |
+    | GET (read) | Retrieve data and never change the database |
+    | POST (create) | Submit new data to the database |
+    | PUT / PATCH (update) | Update existing records, PUT replace entire resource while PATCH update partial fields |
+    | DELETE (delete) | Remove specific resources |
+
+- **HTTP status codes:**
+<table>
+    <thead><tr><th colspan="2">Status codes</th><th>Description</th></tr></thead>
+    <tbody>
+        <tr><td rowspan="2">Success</td><td>200 OK</td><td>Successful HTTP request</td></tr>
+        <tr><td>201 Created</td><td>Successful request and new resource was created</td></tr>
+        <tr><td rowspan="3">Client Error</td><td>400 Bad Request</td><td>Server cannot understand the request due to invalid syntax</td></tr>
+        <tr><td>404 Not Found</td><td>Server cannot find the requested resource</td></tr>
+        <tr><td>422 Unprocessable Content</td><td>Data in JASON failed validation</td></tr>
+        <tr><td>Server Error</td><td>500 Internal Server Error</td><td>Server encountered unexpected condition</td></tr>
+    </tbody>
+</table>
+
+### 3. FastApi
+- FastAPI is a high performance web framework for building APIs with Python.
+
+- **Key features:**
+    | Features | Desription |
+    | --- | --- |
+    | Asynchronous | Allow handling of multiple request concurrently |
+    | Automatic Open API Documentation | Automatically generate interactive API documentation |
+    | Security and Authentication | Support different authentication methods |
+    | Pythonic Syntax | Easy to be implemented with Python workflows |
