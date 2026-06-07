@@ -1,0 +1,16 @@
+gene_id,symbol,organism,chromosome,function
+BRCA1,BRCA1,Homo sapiens,17,DNA repair and tumor suppression
+BRCA2,BRCA2,Homo sapiens,13,DNA repair and homologous recombination
+TP53,TP53,Homo sapiens,17,Tumor suppressor and cell cycle regulation
+EGFR,EGFR,Homo sapiens,7,Epidermal growth factor receptor signaling
+MYC,MYC,Homo sapiens,8,Transcription factor and cell proliferation
+PTEN,PTEN,Homo sapiens,10,Phosphatase and tumor suppressor
+KRAS,KRAS,Homo sapiens,12,GTPase and signal transduction
+AKT1,AKT1,Homo sapiens,14,Serine/threonine kinase and cell survival
+VEGFA,VEGFA,Homo sapiens,6,Vascular endothelial growth factor A
+GAPDH,GAPDH,Homo sapiens,12,Glycolysis and housekeeping gene
+Trp53,TP53,Mus musculus,11,Tumor suppressor homolog in mouse
+Brca1,BRCA1,Mus musculus,11,DNA repair homolog in mouse
+Egfr,EGFR,Mus musculus,11,Growth factor receptor in mouse
+Myc,MYC,Mus musculus,15,Proto-oncogene in mouse
+Gapdh,GAPDH,Mus musculus,6,Housekeeping gene in mouse
