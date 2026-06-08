@@ -41,7 +41,7 @@ DF = pd.read_csv(CSV_PATH, dtype={"chromosome": str})  # keep chromosome as stri
 # -----------------------------------------------------------------------------
 @app.get("/")
 def root():
-    """Welcome message and dataset summary."""
+    """Welcome message and dataset summary.""" #documentation
     return {
         "message": "Welcome to the Gene Data API!",
         "total_genes": len(DF),          # len(DataFrame) = number of rows
