@@ -1,7 +1,9 @@
 import os
 from fastapi import FastAPI, HTTPException
 from motor.motor_asyncio import AsyncIOMotorClient
+from dotenv import load_dotenv
 
+load_dotenv()
 app = FastAPI(
     title="Airbnb Price Analysis API",
     description="API to calculate average Airbnb listing prices from MongoDB Atlas.",
@@ -9,11 +11,12 @@ app = FastAPI(
 )
 
 # MongoDB connection setup
-MONGO_URI = "mongodb+srv://dbAdmin:123abc@cluster0.dklylwy.mongodb.net/"
+MONGO_URI = os.getenv("MONGO_URI")
+if not MONGO_URI:
+    raise RuntimeError("MONGO_URI missing! Please check your local .env file.")
 client = AsyncIOMotorClient(MONGO_URI)
 db = client["sample_airbnb"]
 collection = db["listingsAndReview"]
-
 
 # Endpoint: average price by city / market
 @app.get("/prices/by-city")
