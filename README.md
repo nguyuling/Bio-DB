@@ -393,6 +393,13 @@ mongoimport --uri "mongodb+srv://<username>:<password>@<cluster>.dklylwy.mongodb
 ### 3. FastApi
 - FastAPI is a high performance web framework for building APIs with Python.
 
+- `fastapi` library
+    | Methods | Description |
+    | --- | --- |
+    | `FastAPI` | Build API |
+    | `HTTPException` | Return error codes to user |
+    | `Query` | Add configuration, validation, and descriptions to optional parameters |
+
 - **Commands for FastAPI**
     | Purpose | Command | Description |
     | --- | --- | --- |
