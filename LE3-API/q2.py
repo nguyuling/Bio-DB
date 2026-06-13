@@ -54,8 +54,7 @@ async def full_sample_detail(
     
     if result is None:
         raise HTTPException(
-            status_code=404,
-            detail=f"Sample '{sample_id}' does not exist."
+            status_code=404,detail=f"Sample '{sample_id}' does not exist."
         )
         
     #! arrange the output sequence
