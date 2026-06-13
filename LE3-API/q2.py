@@ -31,7 +31,7 @@ async def full_sample_detail(
     
     #! documentation
     """
-        #!Get Full Sample Detail.
+        Get Full Sample Detail.
     """
     
     #! find sample
@@ -57,4 +57,11 @@ async def full_sample_detail(
             detail=f"Sample '{sample_id}' does not exist."
         )
         
-    return result
+    #! arrange the output sequence
+    ordered_result = {
+        "sample_id": result.get("sample_id"),
+        "location": result.get("location"),
+        "collection_date": result.get("collection_date"),
+        "sequences": result.get("sequences")
+    }
+    return ordered_result
