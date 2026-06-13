@@ -24,7 +24,9 @@ app = FastAPI(
 #! path parameter
 @app.get("/samples/{sample_id}")
 async def full_sample_detail(
-    sample_id: str = Path (description = "e.g. SMP0001")
+    sample_id: str = Path(
+        description = "e.g. SMP0001"
+    )
 ):
     
     #! documentation
