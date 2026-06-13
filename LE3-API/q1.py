@@ -64,7 +64,7 @@ async def list_samples(
         }
     ]
     
-    #! read user input
+    #! execute pipeline
     try:
         cursor = collection.aggregate(pipeline)
         result = await cursor.to_list(length=limit)        
