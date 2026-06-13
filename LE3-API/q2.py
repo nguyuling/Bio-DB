@@ -50,6 +50,9 @@ async def full_sample_detail(
     
     #! if sample not found
     except Exception as e:
+        raise HTTPException(status_code=404, detail=str(e))
+    
+    if result is None:
         raise HTTPException(
             status_code=404,
             detail=f"Sample '{sample_id}' does not exist."

@@ -46,12 +46,16 @@ async def sample_sequences(
             }
         )
     except Exception as e:
+        raise HTTPException(status_code=500, details=str(e))
+    
+    #! if sample not found
+    if result is None:
         raise HTTPException(
             status_code=404,
             detail=f"Sample {"sample_id"} does not exist"
         )
     
-    #! arrange the output sequence
+    #! arrange the output
     ordered_result = {
         "sample_id": result.get("sample_id"),
         "sequence_count": len(result.get("sequences", [])), # Done directly in Python!
