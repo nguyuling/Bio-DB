@@ -67,7 +67,7 @@ async def list_samples(
     #! read user input
     try:
         cursor = collection.aggregate(pipeline)
-        results = await cursor.to_list(length=limit)        
+        result = await cursor.to_list(length=limit)        
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -76,5 +76,5 @@ async def list_samples(
         "total": await collection.count_documents({}),
         "page": page,
         "limit": limit,
-        "data": results
+        "data": result
     }
