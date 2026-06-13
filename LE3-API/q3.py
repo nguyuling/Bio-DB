@@ -56,9 +56,8 @@ async def sample_sequences(
         )
     
     #! arrange the output
-    ordered_result = {
+    return {
         "sample_id": result.get("sample_id"),
         "sequence_count": len(result.get("sequences", [])), # Done directly in Python!
         "sequences": result.get("sequences")
     }
-    return ordered_result
