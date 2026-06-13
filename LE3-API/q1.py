@@ -17,7 +17,7 @@ collection = db["genomes"]
 from fastapi import FastAPI, HTTPException, Query
 app = FastAPI(
     title="Metagenomics API",
-    description="API to for genomes.",
+    description="API for gene sequence of organisms found in the environments.",
     version="1.0.0"
 )
 
@@ -46,7 +46,7 @@ async def list_samples(
     #! filter
     match_filter = {}
     if environment_type:
-        match_filter["environment_type"] = environment_type
+        match_filter["environment_type"] = environment_type.capitalize()
         
     #! mongodb aggregation pipeline
     pipeline = [
