@@ -46,10 +46,6 @@ async def sample_sequences(
             }
         )
     except Exception as e:
-        raise HTTPException(status_code=500, details=str(e))
-    
-    #! if sample not found
-    if result is None:
         raise HTTPException(
             status_code=404,
             detail=f"Sample {"sample_id"} does not exist"
