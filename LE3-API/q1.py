@@ -25,16 +25,16 @@ app = FastAPI(
 @app.get("/samples")
 async def list_samples(
     page: int | None = Query(
-        default = 1,
-        description = "Page number (1-indexed)"
+        default=1,
+        description="Page number (1-indexed)"
     ),
     limit: int | None = Query(
-        default = 20,
-        description = "Number of results per page (max 100)"
+        default=20,
+        description="Number of results per page (max 100)"
     ),
     environment_type: str | None = Query (
-        default = None,
-        description = "Filter by Soil, Water, Air, or Sediment"
+        default=None,
+        description="Filter by Soil, Water, Air, or Sediment"
     )
 ):
     
