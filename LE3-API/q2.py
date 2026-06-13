@@ -29,7 +29,7 @@ async def full_sample_detail(
     
     #! documentation
     """
-    Get Full Sample Detail.
+        Get Full Sample Detail.
     """
     
     #! find sample
